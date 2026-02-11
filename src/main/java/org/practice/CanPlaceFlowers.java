@@ -38,22 +38,16 @@ public class CanPlaceFlowers {
                     n--;
                 }
             }
-            if(n<=0) return true;
-            return false;
+           return (n<=0);  //return true else  false;
         }
 
 
         boolean canPlant(int[] flowerbed,int i){
-            boolean left =false, right=false;
 
             if(flowerbed[i]==1) return false;
+            if(i > 0 &&  flowerbed[i-1]==1)  return false;
+            if (i < flowerbed.length-1 && flowerbed[i+1]==1 ) return false;
 
-            if(i > 0 &&  flowerbed[i-1]==1) {
-                return false;
-            }
-            if(i < flowerbed.length-1 && flowerbed[i+1]==1 ){
-                return false;
-            }
             return true;
         }
 

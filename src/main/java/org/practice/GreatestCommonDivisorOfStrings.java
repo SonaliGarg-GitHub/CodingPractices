@@ -41,6 +41,7 @@ package org.practice;
 
 class GreatestCommonDivisorOfStrings {
     public String gcdOfStrings(String str1, String str2) {
+        if (str1.isEmpty() || str2.isEmpty()) return  "";
         if(!(str1+str2).equals(str2+str1)){
             return "";
         }
